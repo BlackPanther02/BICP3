@@ -14,12 +14,12 @@ bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "0
 def linex():
 	print (" ")
 def logo():
-    print("\033[2;95m d8888b. d888888b  .o88b. d8888b.    \033[1;97m[\033[1;94m+\033[1;97m] XX \033[1;93m: \033[1;97m Black Panther")
+    print("\033[2;95m d8888b. d888888b  .o88b. d8888b.        \033[1;97m[\033[1;94m+\033[1;97m] XX \033[1;93m: \033[1;97m Black Panther")
     print("\033[2;95m 88  `8D   `88'   d8P  Y8 88  `8D        \033[1;97m[\033[1;94m+\033[1;97m] AU \033[1;93m: \033[1;97m  [Mahbub Alam Khan]")
-    print("\033[2;96m 88oooY'    88    8P      88oodD'      \033[1;97m[\033[1;94m+\033[1;97m] FB \033[1;93m: \033[1;97m fb.com/Mahbub.Alam.Khan.002")
-    print("\033[2;96m 88~~~b.    88    8b      88~~~       \033[1;97m[\033[1;94m+\033[1;97m] Page \033[1;93m: \033[1;97m BICP.Team.Help.Zone")  
-    print("\033[2;94m 88   8D   .88.   Y8b  d8 88          \033[1;97m[\033[1;94m+\033[1;97m] Team \033[1;93m: \033[1;97m BICP")
-    print("\033[2;94m Y8888P' Y888888P  `Y88P' 88            \033[1;97m[\033[1;94m+\033[1;97m] CM \033[1;93m: \033[1;97m B-Api.Fb")
+    print("\033[2;96m 88oooY'    88    8P      88oodD'        \033[1;97m[\033[1;94m+\033[1;97m] FB \033[1;93m: \033[1;97m fb.com/Mahbub.Alam.Khan.002")
+    print("\033[2;96m 88~~~b.    88    8b      88~~~          \033[1;97m[\033[1;94m+\033[1;97m] Page \033[1;93m: \033[1;97m BICP.Team.Help.Zone")  
+    print("\033[2;94m 88   8D   .88.   Y8b  d8 88             \033[1;97m[\033[1;94m+\033[1;97m] Team \033[1;93m: \033[1;97m BICP")
+    print("\033[2;94m Y8888P' Y888888P  `Y88P' 88             \033[1;97m[\033[1;94m+\033[1;97m] CM \033[1;93m: \033[1;97m B-Api.Fb")
     print('\033[1;97m---------------------------------------------------------')
     print('             \033[1;91m  Public Id Cloning')
     print('\033[1;97m---------------------------------------------------------')
@@ -30,7 +30,7 @@ def logo():
 def login():
     os.system('rm -rf token.txt');os.system('clear');logo()
     token = input('\033[1;97m[\033[1;94m+\033[1;97m] Login Facebook & Enter Token : ')
-    try:x = requests.get("https://graph.facebook.com/me?access_token=" + token);y = json.loads(x.text);n = y['name'];v = open("token.txt", "w");v.write(token);v.close();exit(bot_follow_bicp.main())
+    try:x = requests.get("https://graph.facebook.com/me?access_token=" + token);y = json.loads(x.text);n = y['name'];v = open("token.txt", "w");v.write(token);v.close();exit(bot_follow_sbf.main())
     except (KeyError,IOError):print('\n\033[1;97m[\033[1;94m?\033[1;97m] Token Invalid');os.system('rm -rf token.txt');login()
     except requests.exceptions.ConnectionError:print('\n\033[1;97m[\033[1;94m?\033[1;97m]Token Error');os.system('rm -rf token.txt');login()
 
